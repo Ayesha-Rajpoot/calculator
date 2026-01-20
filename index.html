@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern, professional calculator with advanced functions and beautiful design">
+    <title>Modern Calculator - Professional & Clean Design</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Calculator Card -->
+        <div class="calculator-card">
+            <!-- Calculator Header -->
+            <div class="calculator-header">
+                <h1>Calculator</h1>
+                <button id="history-toggle" class="history-btn" aria-label="Toggle History">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Display Section -->
+            <div class="display-section">
+                <div id="previous-display" class="previous-display"></div>
+                <div id="current-display" class="current-display">0</div>
+            </div>
+
+            <!-- Calculator Buttons -->
+            <div class="buttons-grid">
+                <!-- Row 1: Clear, Delete, Percentage, Division -->
+                <button id="btn-clear" class="btn btn-function" data-action="clear">AC</button>
+                <button id="btn-delete" class="btn btn-function" data-action="delete">DEL</button>
+                <button id="btn-percent" class="btn btn-operator" data-action="percent">%</button>
+                <button id="btn-divide" class="btn btn-operator" data-operator="÷">÷</button>
+
+                <!-- Row 2: 7, 8, 9, Multiply -->
+                <button id="btn-7" class="btn btn-number" data-number="7">7</button>
+                <button id="btn-8" class="btn btn-number" data-number="8">8</button>
+                <button id="btn-9" class="btn btn-number" data-number="9">9</button>
+                <button id="btn-multiply" class="btn btn-operator" data-operator="×">×</button>
+
+                <!-- Row 3: 4, 5, 6, Subtract -->
+                <button id="btn-4" class="btn btn-number" data-number="4">4</button>
+                <button id="btn-5" class="btn btn-number" data-number="5">5</button>
+                <button id="btn-6" class="btn btn-number" data-number="6">6</button>
+                <button id="btn-subtract" class="btn btn-operator" data-operator="-">−</button>
+
+                <!-- Row 4: 1, 2, 3, Add -->
+                <button id="btn-1" class="btn btn-number" data-number="1">1</button>
+                <button id="btn-2" class="btn btn-number" data-number="2">2</button>
+                <button id="btn-3" class="btn btn-number" data-number="3">3</button>
+                <button id="btn-add" class="btn btn-operator" data-operator="+">+</button>
+
+                <!-- Row 5: Toggle Sign, 0, Decimal, Equals -->
+                <button id="btn-toggle" class="btn btn-function" data-action="toggle">+/−</button>
+                <button id="btn-0" class="btn btn-number" data-number="0">0</button>
+                <button id="btn-decimal" class="btn btn-number" data-action="decimal">.</button>
+                <button id="btn-equals" class="btn btn-equals" data-action="equals">=</button>
+
+                <!-- Row 6: Advanced Functions -->
+                <button id="btn-square" class="btn btn-advanced" data-action="square">x²</button>
+                <button id="btn-sqrt" class="btn btn-advanced" data-action="sqrt">√x</button>
+                <button id="btn-reciprocal" class="btn btn-advanced" data-action="reciprocal">1/x</button>
+                <button id="btn-pi" class="btn btn-advanced" data-action="pi">π</button>
+            </div>
+        </div>
+
+        <!-- History Panel -->
+        <div id="history-panel" class="history-panel">
+            <div class="history-header">
+                <h2>History</h2>
+                <button id="clear-history" class="clear-history-btn">Clear All</button>
+            </div>
+            <div id="history-list" class="history-list">
+                <p class="no-history">No calculations yet</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
